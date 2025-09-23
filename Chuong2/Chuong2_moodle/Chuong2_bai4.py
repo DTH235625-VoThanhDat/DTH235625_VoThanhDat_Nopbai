@@ -1,17 +1,20 @@
-#Hàm chuyển đổi kiểu dữ liệu trong Python
-# Hàm int() biến đổi số thực, chuỗi thành số nguyên 
-print(int(3.14)) 
-print(int(3.9999)) 
-print(int(3.0)) # Không làm tròn tới số nguyên gần nhất 
-print(int(-3.9999)) 
-print(int('12345')) 
- 
-# Hàm float() biến đổi số nguyên, chuỗi thành số thực 
-print(float(17)) 
-print(float('123.45')) 
- 
-# Hàm str() biến đổi đối số của nó thành chuỗi 
-print(str(17)) 
-print(str('123.45')) 
+# Câu 4: Python hỗ trợ những kiểu dữ liệu cơ bản nào?
+# - int (số nguyên)
+# - float (số thực)
+# - complex (số phức)
+# - bool (đúng/sai)
+# - str (chuỗi ký tự)
+# - list (danh sách)
+# - tuple (bộ giá trị)
+# - set (tập hợp)
+# - dict (từ điển - cặp key:value)
 
-print ('---------------------\n')
+a = 10        # int
+b = 3.14      # float
+c = 2 + 3j    # complex
+d = True      # bool
+e = "Hello"   # str
+f = [1,2,3]   # list
+g = (1,2,3)   # tuple
+h = {1,2,3}   # set
+i = {"a":1, "b":2}  # dict

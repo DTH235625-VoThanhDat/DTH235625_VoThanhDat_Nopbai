@@ -1,26 +1,12 @@
-# lệnh điều kiện if...else
-a = 10 
-b = 20 
-if a < b:
-    print('a = ', a) 
-    print('b = ', b) 
-    print('a nhỏ hơn b') 
-else:
-    print('a = ', a) 
-    print('b = ', b) 
-    print('a lớn hơn b') 
-    print('Tổng của a và b là', a + b)
-    
-print('--------\n')
+# Câu 8: Trình bày các loại lỗi khi lập trình và cách bắt lỗi trong Python.
+# - SyntaxError: sai cú pháp
+# - NameError: dùng biến chưa khai báo
+# - TypeError: sai kiểu dữ liệu
+# - ValueError: giá trị không hợp lệ
+# - ZeroDivisionError: chia cho 0
+# Có thể bắt lỗi bằng try-except
 
-# lệnh điều kiện if...elif...else
-a = 10 
-b = 10 
-if a < b: 
-    print('a nhỏ hơn b') 
-elif a > b: 
-    print('a lớn hơn b') 
-else: 
-    print('a bằng b') 
-    
-print ('--------\n')
+try:
+    a = int("abc")  # gây ValueError
+except ValueError:
+    print("Lỗi: không thể chuyển đổi chuỗi thành số nguyên")
