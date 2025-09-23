@@ -1,23 +1,5 @@
-#Viết chương trình Python in cây thông ra màn hình theo mẫu
-# Xác định chiều cao của cây thông
-height = 5
-
-# Vòng lặp để vẽ phần thân cây
-for i in range(height):
-    # In khoảng trắng để căn giữa
-    print(" " * (height - i - 1) + "*" * (2 * i + 1))
-
-# Vòng lặp để vẽ phần gốc cây
-print(" " * (height - 1) + "*")
-
-#này thử sài f-string (formatted string literals) á
-# Xác định chiều cao của cây thông
-height = 5
-
-# Vẽ phần thân cây
-for i in range(height):
-    stars = '*' * (2 * i + 1)
-    print(f"{stars:^{2*height-1}}")  # Căn giữa theo chiều rộng
-
-# Vẽ phần gốc cây
-print(f"{'*':^{2*height-1}}")
+so_sao = [1, 3, 7, 3, 5, 11, 2, 2]
+chieu_rong = max(so_sao)  
+for n in so_sao:
+    khoang_trang = (chieu_rong - n) // 2
+    print(" " * khoang_trang + "*" * n)
