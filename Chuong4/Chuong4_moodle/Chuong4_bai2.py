@@ -15,7 +15,7 @@ while True:
             print("Bạn đã chọn sai, số máy > số của bạn")
         else:
             print("Bạn đã chọn sai, số máy < số của bạn")
-    if win == False:
+    if win == False:  # noqa: E712
         print("GAME OVER!, số máy: ", somay)
     hoi = input("Tiếp không(c/k)?")
     if hoi == "k":
