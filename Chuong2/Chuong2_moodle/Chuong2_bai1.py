@@ -6,5 +6,5 @@ try:
     dt = math.pi * r * r
     print("Chu vi hình tròn là: ", cv)
     print("Diện tích hình tròn là: ", dt)
-except:
+except:  # noqa: E722
     print("Lỗi rồi!")
