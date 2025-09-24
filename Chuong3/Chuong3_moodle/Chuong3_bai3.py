@@ -1,83 +1,27 @@
-{
- "cells": [
-  {
-   "cell_type": "markdown",
-   "id": "ff2eba8f",
-   "metadata": {},
-   "source": [
-    "Câu 3: Phương trình bậc 2 \n",
-    " \n",
-    "Yêu cầu: \n",
-    "Viết chương trình giải phương trình bậc 2: ax^2 + bx + c = 0"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 1,
-   "id": "d9523aa2",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Chương trình Giải Phương trình bậc 2\n",
-      "x1= -1.0\n",
-      "x2= -0.5\n"
-     ]
-    }
-   ],
-   "source": [
-    "#ax^2+bx+c=0 \n",
-    "from math import sqrt \n",
-    " \n",
-    "print(\"Chương trình Giải Phương trình bậc 2\") \n",
-    "a=float(input(\"Nhập a:\")) \n",
-    "b=float(input(\"Nhập b:\")) \n",
-    "c=float(input(\"Nhập c:\")) \n",
-    "if a == 0: \n",
-    "    #bx+c=0 \n",
-    "    if b == 0 and c ==0: \n",
-    "        print(\"Vô số nghiệm\") \n",
-    "    elif b==0 and c !=0: \n",
-    "        print(\"Vô nghiệm\") \n",
-    "    else:\n",
-    "        x=-c/b \n",
-    "        print(\"No x=\",x) \n",
-    "else: \n",
-    "    delta=b**2-4*a*c \n",
-    "    if delta <0 : \n",
-    "        print(\"Vô No\") \n",
-    "    elif delta ==0: \n",
-    "        x=-b/(2*a) \n",
-    "        print(\"No kép x1=x2=\",x) \n",
-    "    else: \n",
-    "        x1=(-b-sqrt(delta))/(2*a) \n",
-    "        x2=(-b+sqrt(delta))/(2*a) \n",
-    "        print(\"x1=\",x1) \n",
-    "        print(\"x2=\",x2)"
-   ]
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python 3",
-   "language": "python",
-   "name": "python3"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.13.7"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+#Giải phương trình bậc hai
+import math
+def TinhPhuongTrinhBacHai(a, b, c):
+    if a == 0:
+        if b == 0:
+            if c == 0:
+                print("Phương trình có vô số nghiệm!")
+            else:
+                print("Phương trình vô nghiệm!")
+        else:
+            print("Phương trình có một nghiệm: x =", -c/b)
+    else:
+        delta = b*b - 4 * a * c 
+        if delta < 0:
+            print("Phương trình vô nghiệm!")
+        elif delta == 0:
+            print("Phương trình có nghiệm kép: x1 = x2 =", -b/(2*a))
+        else:
+            x1 = (-b + math.sqrt(delta)) / (2*a)
+            x2 = (-b - math.sqrt(delta)) / (2*a)
+            print("Phương trình có hai nghiệm phân biệt: x1 =", x1," x2 =", x2)
+
+a = float(input("Nhập hệ số a: "))
+b = float(input("Nhập hệ số b: "))
+c = float(input("Nhập hệ số c: "))
+print("Kết quả chương tình:")
+TinhPhuongTrinhBacHai(a, b, c)
