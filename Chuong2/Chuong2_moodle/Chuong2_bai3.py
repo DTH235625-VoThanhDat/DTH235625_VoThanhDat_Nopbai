@@ -1,4 +1,3 @@
-#Chương trình tính điểm trung bình ba môn Toán, Lý Hóa
 toan = float(input("Nhập điểm môn Toán: "))
 ly = float(input("Nhập điểm môn Lý: "))
 hoa = float(input("Nhập điểm môn Hóa: "))

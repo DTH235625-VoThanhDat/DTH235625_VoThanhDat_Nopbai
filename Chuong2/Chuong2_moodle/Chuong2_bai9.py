@@ -1,4 +1,4 @@
-# Câu 9: Giải thích kết quả tính toán của các biểu thức
+# Giải thích kết quả tính toán của các biểu thức
 i1, i2, i3 = 2, 5, -3
 d1, d2, d3 = 2.0, 5.0, -0.5
 

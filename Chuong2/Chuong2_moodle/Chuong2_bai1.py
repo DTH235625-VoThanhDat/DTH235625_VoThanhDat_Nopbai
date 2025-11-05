@@ -1,4 +1,3 @@
-#Tính chu vi và diện tích hình tròn
 import math
 try:
     r  = float(input("Nhập bán kính hình tròn: "))

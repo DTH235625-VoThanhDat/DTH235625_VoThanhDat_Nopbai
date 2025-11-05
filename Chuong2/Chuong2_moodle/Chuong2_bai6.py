@@ -1,4 +1,4 @@
-# Câu 6: Trình bày ý nghĩa toán tử /, //, %, **, and, or, is.
+# Trình bày ý nghĩa toán tử /, //, %, **, and, or, is.
 x, y = 7, 3
 print(x / y)   # / : chia thực (kết quả float) -> 2.333...
 print(x // y)  # //: chia lấy phần nguyên -> 2
