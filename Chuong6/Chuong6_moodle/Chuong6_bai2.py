@@ -1,45 +1,32 @@
 from random import randrange
 
-# Khởi tạo danh sách rỗng
-lst = []
+def TaoMang(SoNguyen)->list:
+    n = randrange(1, 100)
+    for i in range(0, n, 1):
+        SoNguyen.append(randrange(-100, 100))
 
-# Nhập số phần tử
-print("Nhập số phần tử:")
-n = int(input())
+def Xoak(SoNguyen, k):
+    SoNguyen.remove(k)
 
-# Sinh ngẫu nhiên n phần tử (0–99) và thêm vào list
-for i in range(n):
-    lst.append(randrange(0, 100))
+def KiemTraDoiXung(SoNguyen):
+    flag = True
+    for i in range(len(SoNguyen)):
+        if SoNguyen[i] != SoNguyen[len(SoNguyen) - i - 1]:
+            flag = False
+            break
+    return flag
 
-print("List sau khi tạo ngẫu nhiên là:")
-print(lst)
 
-# Thêm 1 phần tử mới vào list
-x = int(input("Mời bạn chèn thêm số mới: "))
-lst.append(x)
-print("List sau khi chèn:")
-print(lst)
-
-# Nhập giá trị cần xóa khỏi list
-k = int(input("Mời nhập số để xóa: "))
-
-# Xóa tất cả các phần tử có giá trị bằng k
-while lst.count(k) > 0:
-    lst.remove(k)
-
-print("List sau khi xóa:")
-print(lst)
-
-# Hàm kiểm tra list có đối xứng không
-def CheckDoiXung(lst):
-    for i in range(len(lst) // 2):
-        if lst[i] != lst[len(lst) - 1 - i]:
-            return False
-    return True
-
-# Gọi hàm kiểm tra và in kết quả
-kt = CheckDoiXung(lst)
-if kt == True:
-    print("List đối xứng")
+SoNguyen = []
+TaoMang(SoNguyen)
+print("Mảng ban đầu:", SoNguyen)
+k = int(input("Nhập số k cần xóa: "))
+if k in SoNguyen:
+    Xoak(SoNguyen, k)
+    print("Mảng sau khi xóa số k:", SoNguyen)
 else:
-    print("List không đối xứng")
+    print("Số k không có trong mảng.")
+if KiemTraDoiXung(SoNguyen):
+    print("Mảng đối xứng")
+else:
+    print("Mảng không đối xứng")

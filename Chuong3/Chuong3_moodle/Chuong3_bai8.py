@@ -1,4 +1,3 @@
-#Tính a + b, a - b, a * b, a / b
 a = float(input("Nhập số a: "))
 b = float(input("Nhập số b: "))
 ch = input("Nhập ký tự ch: ")

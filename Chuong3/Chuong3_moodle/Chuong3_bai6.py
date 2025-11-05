@@ -1,4 +1,3 @@
-#Đọc số có tối đa 2 chữ số
 n = 0
 while True:
     n = int(input("Nhập số nguyên n có tối đa 2 chữ số: "))

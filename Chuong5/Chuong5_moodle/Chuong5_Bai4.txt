@@ -1,0 +1,52 @@
+Nhóm 1: Kiểm tra nội dung chuỗi (trả về True / False)
+s.isalnum() → chuỗi chỉ gồm chữ và số.
+s.isalpha() → chuỗi chỉ gồm chữ cái.
+s.isdigit() → chuỗi chỉ gồm số.
+s.isnumeric() → chuỗi là số (bao gồm số Unicode).
+s.isdecimal() → chuỗi là chữ số thập phân.
+s.islower() → chuỗi toàn chữ thường.
+s.isupper() → chuỗi toàn chữ hoa.
+s.istitle() → chuỗi có dạng viết hoa chữ cái đầu mỗi từ.
+s.isspace() → chuỗi chỉ gồm khoảng trắng.
+s.startswith(prefix) → chuỗi bắt đầu bằng prefix.
+s.endswith(suffix) → chuỗi kết thúc bằng suffix.
+
+Nhóm 2: Chuyển đổi kiểu chữ
+s.lower() → chuyển thành chữ thường.
+s.upper() → chuyển thành chữ hoa.
+s.capitalize() → viết hoa chữ cái đầu tiên.
+s.title() → viết hoa chữ cái đầu của từng từ.
+s.swapcase() → đảo ngược hoa/thường.
+
+Nhóm 3: Xử lý khoảng trắng & ký tự
+s.strip() → bỏ khoảng trắng đầu/cuối chuỗi.
+s.lstrip() → bỏ khoảng trắng bên trái.
+s.rstrip() → bỏ khoảng trắng bên phải.
+s.center(width, fillchar) → căn giữa.
+s.ljust(width, fillchar) → căn trái.
+s.rjust(width, fillchar) → căn phải.
+s.zfill(width) → thêm số 0 vào trước cho đủ độ dài.
+
+Nhóm 4: Tìm kiếm & thay thế
+s.find(sub) → vị trí xuất hiện đầu tiên của sub (−1 nếu không có).
+s.rfind(sub) → vị trí xuất hiện cuối cùng.
+s.index(sub) → giống find() nhưng lỗi nếu không tìm thấy.
+s.rindex(sub) → giống rfind() nhưng lỗi nếu không tìm thấy.
+s.count(sub) → đếm số lần xuất hiện của sub.
+s.replace(old, new, count) → thay thế chuỗi con.
+
+Nhóm 5: Tách & nối chuỗi
+s.split(sep) → tách chuỗi thành list theo sep.
+s.rsplit(sep) → tách từ phải sang.
+s.splitlines() → tách theo dòng.
+'sep'.join(list) → nối list thành chuỗi với ký tự ngăn cách.
+
+Nhóm 6: Các hàm tiện ích khác
+len(s) → độ dài chuỗi.
+ord(c) → mã ASCII/Unicode của ký tự c.
+chr(i) → ký tự từ mã ASCII/Unicode i.
+format() hoặc f-string → định dạng chuỗi.
+s.encode() → mã hóa chuỗi (UTF-8, ASCII…).
+s.expandtabs(tabsize) → thay \t bằng khoảng trắng.
+s.partition(sep) → chia chuỗi thành 3 phần (trước, sep, sau).
+s.rpartition(sep) → chia từ phải sang.

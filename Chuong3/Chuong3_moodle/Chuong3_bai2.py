@@ -1,4 +1,3 @@
-#Đếm số ngày trong tháng
 thang = 0
 while True:
     thang = int(input("Nhập vào một tháng: "))

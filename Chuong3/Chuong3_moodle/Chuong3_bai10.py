@@ -1,4 +1,3 @@
-#Tính S(x,n) = x + x^2/2! + x^3/3! + ... + x^n/n!
 def GiaiThua(n):
     if n == 0 or n == 1:
         return 1

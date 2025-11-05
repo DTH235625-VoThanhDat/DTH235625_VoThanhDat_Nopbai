@@ -1,4 +1,3 @@
-#Giải phương trình bậc hai
 import math
 def TinhPhuongTrinhBacHai(a, b, c):
     if a == 0:
