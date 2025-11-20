@@ -1,137 +1,17 @@
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "1345d6e6",
-   "metadata": {
-    "vscode": {
-     "languageId": "plaintext"
-    }
-   },
-   "outputs": [],
-   "source": [
-    "{\n",
-    " \"cells\": [\n",
-    "  {\n",
-    "   \"cell_type\": \"code\",\n",
-    "   \"execution_count\": null,\n",
-    "   \"id\": \"14007eb7\",\n",
-    "   \"metadata\": {},\n",
-    "   \"outputs\": [],\n",
-    "   \"source\": [\n",
-    "    \"day     = int(input(\\\"Nhập ngày: \\\"))\\n\",\n",
-    "    \"month   = int(input(\\\"Nhập tháng: \\\"))\\n\",\n",
-    "    \"year    = int(input(\\\"Nhập năm: \\\"))\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"def is_leap_year(y):\\n\",\n",
-    "    \"    return (y % 4 == 0 and y % 100 != 0) or (y % 400 == 0)\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"def is_valid_date(d, m, y):\\n\",\n",
-    "    \"    if y < 1 or m < 1 or m > 12 or d < 1:\\n\",\n",
-    "    \"        return False\\n\",\n",
-    "    \"    days_in_month = [31, 29 if is_leap_year(y) else 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]\\n\",\n",
-    "    \"    return d <= days_in_month[m-1]\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"if is_valid_date(day, month, year):\\n\",\n",
-    "    \"    print(\\\"Ngày hợp lệ.\\\")\\n\",\n",
-    "    \"else:\\n\",\n",
-    "    \"    print(\\\"Ngày không hợp lệ.\\\")\"\n",
-    "   ]\n",
-    "  },\n",
-    "  {\n",
-    "   \"cell_type\": \"code\",\n",
-    "   \"execution_count\": null,\n",
-    "   \"id\": \"5075671e\",\n",
-    "   \"metadata\": {},\n",
-    "   \"outputs\": [],\n",
-    "   \"source\": [\n",
-    "    \"da       = int(input(\\\"Nhập ngày: \\\"))\\n\",\n",
-    "    \"month    = int(input(\\\"Nhập tháng: \\\"))\\n\",\n",
-    "    \"year     = int(input(\\\"Nhập năm: \\\"))\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"hop_le = True\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"if year <= 0 or month <= 0 or day <= 0:\\n\",\n",
-    "    \"    hop_le = False\\n\",\n",
-    "    \"elif month > 12:\\n\",\n",
-    "    \"    hop_le = False\\n\",\n",
-    "    \"else:\\n\",\n",
-    "    \"    if month in (1, 3, 5, 7, 8, 10, 12):\\n\",\n",
-    "    \"        max_day = 31\\n\",\n",
-    "    \"    elif month in (4, 6, 9, 11):\\n\",\n",
-    "    \"        max_day = 30\\n\",\n",
-    "    \"    else:  # Tháng 2\\n\",\n",
-    "    \"        # Năm nhuận\\n\",\n",
-    "    \"        if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):\\n\",\n",
-    "    \"            max_day = 29\\n\",\n",
-    "    \"        else:\\n\",\n",
-    "    \"            max_day = 28\\n\",\n",
-    "    \"    if day > max_day:\\n\",\n",
-    "    \"        hop_le = False\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"print(\\\"Ngày hợp lệ\\\" if hop_le else \\\"Ngày không hợp lệ\\\")\\n\"\n",
-    "   ]\n",
-    "  },\n",
-    "  {\n",
-    "   \"cell_type\": \"code\",\n",
-    "   \"execution_count\": 1,\n",
-    "   \"id\": \"8afcdf99\",\n",
-    "   \"metadata\": {},\n",
-    "   \"outputs\": [\n",
-    "    {\n",
-    "     \"name\": \"stdout\",\n",
-    "     \"output_type\": \"stream\",\n",
-    "     \"text\": [\n",
-    "      \"Ngày hợp lệ\\n\"\n",
-    "     ]\n",
-    "    }\n",
-    "   ],\n",
-    "   \"source\": [\n",
-    "    \"from datetime import datetime\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"try:\\n\",\n",
-    "    \"    day = int(input(\\\"Nhập ngày: \\\"))\\n\",\n",
-    "    \"    month = int(input(\\\"Nhập tháng: \\\"))\\n\",\n",
-    "    \"    year = int(input(\\\"Nhập năm: \\\"))\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"    datetime(year, month, day)  # Nếu không lỗi thì ngày hợp lệ\\n\",\n",
-    "    \"    print(\\\"Ngày hợp lệ\\\")\\n\",\n",
-    "    \"except ValueError:\\n\",\n",
-    "    \"    print(\\\"Ngày không hợp lệ\\\")\\n\"\n",
-    "   ]\n",
-    "  }\n",
-    " ],\n",
-    " \"metadata\": {\n",
-    "  \"kernelspec\": {\n",
-    "   \"display_name\": \"Python 3\",\n",
-    "   \"language\": \"python\",\n",
-    "   \"name\": \"python3\"\n",
-    "  },\n",
-    "  \"language_info\": {\n",
-    "   \"codemirror_mode\": {\n",
-    "    \"name\": \"ipython\",\n",
-    "    \"version\": 3\n",
-    "   },\n",
-    "   \"file_extension\": \".py\",\n",
-    "   \"mimetype\": \"text/x-python\",\n",
-    "   \"name\": \"python\",\n",
-    "   \"nbconvert_exporter\": \"python\",\n",
-    "   \"pygments_lexer\": \"ipython3\",\n",
-    "   \"version\": \"3.13.7\"\n",
-    "  }\n",
-    " },\n",
-    " \"nbformat\": 4,\n",
-    " \"nbformat_minor\": 5\n",
-    "}"
-   ]
-  }
- ],
- "metadata": {
-  "language_info": {
-   "name": "python"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+# Câu 16: Kiểm tra ngày tháng năm hợp lệ
+
+day = int(input("Nhập ngày: "))
+month = int(input("Nhập tháng: "))
+year = int(input("Nhập năm: "))
+
+# Số ngày trong từng tháng
+days_in_month = [0,31,28,31,30,31,30,31,31,30,31,30,31]
+
+# Kiểm tra năm nhuận
+if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
+    days_in_month[2] = 29
+
+if 1 <= month <= 12 and 1 <= day <= days_in_month[month]:
+    print("Ngày tháng năm hợp lệ")
+else:
+    print("Ngày tháng năm không hợp lệ")

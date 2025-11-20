@@ -1,123 +1,26 @@
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "dc698dd3",
-   "metadata": {
-    "vscode": {
-     "languageId": "plaintext"
-    }
-   },
-   "outputs": [],
-   "source": [
-    "{\n",
-    " \"cells\": [\n",
-    "  {\n",
-    "   \"cell_type\": \"code\",\n",
-    "   \"execution_count\": 13,\n",
-    "   \"id\": \"38e90845\",\n",
-    "   \"metadata\": {},\n",
-    "   \"outputs\": [\n",
-    "    {\n",
-    "     \"name\": \"stdout\",\n",
-    "     \"output_type\": \"stream\",\n",
-    "     \"text\": [\n",
-    "      \"Phương trình có 2 nghiệm phân biệt: x1 =  -0.5 , x2 =  -1.0\\n\"\n",
-    "     ]\n",
-    "    }\n",
-    "   ],\n",
-    "   \"source\": [\n",
-    "    \"import math\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"a = float (input (\\\"Nhập a: \\\"))\\n\",\n",
-    "    \"b = float (input (\\\"Nhập b: \\\"))\\n\",\n",
-    "    \"c = float (input (\\\"Nhập c: \\\"))\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"if a == 0:\\n\",\n",
-    "    \"    print (\\\"Đây không phải phương trình bậc 2\\\") \\n\",\n",
-    "    \"else:\\n\",\n",
-    "    \"    delta = b**2 - 4*a*c\\n\",\n",
-    "    \"    if delta < 0:\\n\",\n",
-    "    \"        print (\\\"Phương trình vô nghiệm\\\")\\n\",\n",
-    "    \"    elif delta == 0: \\n\",\n",
-    "    \"        x = -b/(2*a)\\n\",\n",
-    "    \"        print (\\\"Phương trình có nghiệm kép: x1 = x2 = \\\", x)\\n\",\n",
-    "    \"    else:\\n\",\n",
-    "    \"        x1 = (-b + math.sqrt(delta)) / (2*a)\\n\",\n",
-    "    \"        x2 = (-b - math.sqrt(delta)) / (2*a)\\n\",\n",
-    "    \"        print (\\\"Phương trình có 2 nghiệm phân biệt: x1 = \\\", x1, \\\", x2 = \\\", x2)\"\n",
-    "   ]\n",
-    "  },\n",
-    "  {\n",
-    "   \"cell_type\": \"code\",\n",
-    "   \"execution_count\": 16,\n",
-    "   \"id\": \"c580a406\",\n",
-    "   \"metadata\": {},\n",
-    "   \"outputs\": [\n",
-    "    {\n",
-    "     \"name\": \"stdout\",\n",
-    "     \"output_type\": \"stream\",\n",
-    "     \"text\": [\n",
-    "      \"Phương trình có 2 nghiệm phân biệt: x1 = -0.5, x2 = -1.0\\n\"\n",
-    "     ]\n",
-    "    }\n",
-    "   ],\n",
-    "   \"source\": [\n",
-    "    \"import math\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"def giai_pt_bac_2 (a,b,c ):\\n\",\n",
-    "    \"    if a == 0:\\n\",\n",
-    "    \"        return \\\"Đây không phải phương trình bậc 2\\\"\\n\",\n",
-    "    \"    else:\\n\",\n",
-    "    \"        delta = b**2 - 4*a*c\\n\",\n",
-    "    \"        if delta < 0:\\n\",\n",
-    "    \"            return \\\"Phương trình vô nghiệm\\\"\\n\",\n",
-    "    \"        elif delta == 0: \\n\",\n",
-    "    \"            x = -b/(2*a)\\n\",\n",
-    "    \"            return \\\"Phương trình có nghiệm kép: x1 = x2 = \\\" + str(x)\\n\",\n",
-    "    \"        else:\\n\",\n",
-    "    \"            x1 = (-b + math.sqrt(delta)) / (2*a)\\n\",\n",
-    "    \"            x2 = (-b - math.sqrt(delta)) / (2*a)\\n\",\n",
-    "    \"            return \\\"Phương trình có 2 nghiệm phân biệt: x1 = \\\" + str(x1) + \\\", x2 = \\\" + str(x2)\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"a = float (input (\\\"Nhập a: \\\"))\\n\",\n",
-    "    \"b = float (input (\\\"Nhập b: \\\"))\\n\",\n",
-    "    \"c = float (input (\\\"Nhập c: \\\"))\\n\",\n",
-    "    \"print (giai_pt_bac_2(a,b,c))\\n\"\n",
-    "   ]\n",
-    "  }\n",
-    " ],\n",
-    " \"metadata\": {\n",
-    "  \"kernelspec\": {\n",
-    "   \"display_name\": \"Python 3\",\n",
-    "   \"language\": \"python\",\n",
-    "   \"name\": \"python3\"\n",
-    "  },\n",
-    "  \"language_info\": {\n",
-    "   \"codemirror_mode\": {\n",
-    "    \"name\": \"ipython\",\n",
-    "    \"version\": 3\n",
-    "   },\n",
-    "   \"file_extension\": \".py\",\n",
-    "   \"mimetype\": \"text/x-python\",\n",
-    "   \"name\": \"python\",\n",
-    "   \"nbconvert_exporter\": \"python\",\n",
-    "   \"pygments_lexer\": \"ipython3\",\n",
-    "   \"version\": \"3.13.5\"\n",
-    "  }\n",
-    " },\n",
-    " \"nbformat\": 4,\n",
-    " \"nbformat_minor\": 5\n",
-    "}"
-   ]
-  }
- ],
- "metadata": {
-  "language_info": {
-   "name": "python"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+# 6_giai_pt_bac2.py
+import math
+try:
+    a = float(input("a = "))
+    b = float(input("b = "))
+    c = float(input("c = "))
+    if a == 0:
+        if b == 0:
+            print("Vô số nghiệm" if c == 0 else "Vô nghiệm")
+        else:
+            x = -c / b
+            print("Phương trình bậc nhất, nghiệm x =", x)
+    else:
+        D = b*b - 4*a*c
+        if D < 0:
+            print("Vô nghiệm thực")
+        elif D == 0:
+            x = -b / (2*a)
+            print("Nghiệm kép x =", x)
+        else:
+            x1 = (-b + math.sqrt(D)) / (2*a)
+            x2 = (-b - math.sqrt(D)) / (2*a)
+            print("x1 =", x1)
+            print("x2 =", x2)
+except Exception as e:
+    print("Lỗi nhập:", e)

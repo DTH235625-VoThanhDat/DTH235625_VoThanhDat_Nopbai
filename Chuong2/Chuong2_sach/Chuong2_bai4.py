@@ -1,147 +1,17 @@
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "730195ae",
-   "metadata": {},
-   "outputs": [
-    {
-     "ename": "",
-     "evalue": "",
-     "output_type": "error",
-     "traceback": [
-      "\u001b[1;31mRunning cells with 'Python 3.13.7' requires the ipykernel package.\n",
-      "\u001b[1;31m<a href='command:jupyter.createPythonEnvAndSelectController'>Create a Python Environment</a> with the required packages."
-     ]
-    }
-   ],
-   "source": [
-    "{\n",
-    " \"cells\": [\n",
-    "  {\n",
-    "   \"cell_type\": \"code\",\n",
-    "   \"execution_count\": 3,\n",
-    "   \"id\": \"4ff35b3d\",\n",
-    "   \"metadata\": {},\n",
-    "   \"outputs\": [\n",
-    "    {\n",
-    "     \"name\": \"stdout\",\n",
-    "     \"output_type\": \"stream\",\n",
-    "     \"text\": [\n",
-    "      \"Tháng 2 năm 1900 có 28 ngày\\n\"\n",
-    "     ]\n",
-    "    }\n",
-    "   ],\n",
-    "   \"source\": [\n",
-    "    \"'''\\n\",\n",
-    "    \"Nhập vào 1 tháng, xuất tháng đó có bao nhiêu ngày. Ví dụ tháng 1, \\n\",\n",
-    "    \"3, 5, 7, 8, 10, 12 có 31 ngày. Tháng 4, 6, 9, 11 có 30 ngày. Nếu là \\n\",\n",
-    "    \"tháng 2 thì yêu cầu nhập thêm năm. Năm nhuận thì tháng 2 có 29 \\n\",\n",
-    "    \"ngày, không nhuần có 28 ngày.'''\\n\",\n",
-    "    \"'''\\n\",\n",
-    "    \"Chia hết cho 4 → là năm nhuận.\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"Ngoại lệ: nếu chia hết cho 100 thì không nhuận.\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"Ngoại lệ của ngoại lệ: nếu chia hết cho 400 thì vẫn nhuận.'''\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"month = int (input (\\\"Nhập tháng (1-12):\\\"))\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"if month in [1, 3, 5, 7, 8, 10, 12]:\\n\",\n",
-    "    \"    print (\\\"Tháng\\\", month, \\\"có 31 ngày\\\")\\n\",\n",
-    "    \"elif month in [4, 6, 9, 11]:\\n\",\n",
-    "    \"    print (\\\"Tháng\\\", month, \\\"có 30 ngày\\\")\\n\",\n",
-    "    \"elif month == 2:\\n\",\n",
-    "    \"    year = int (input (\\\"Nhập năm:\\\"))\\n\",\n",
-    "    \"    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):\\n\",\n",
-    "    \"        print (\\\"Tháng 2 năm\\\", year, \\\"có 29 ngày\\\")\\n\",\n",
-    "    \"    else:\\n\",\n",
-    "    \"        print (\\\"Tháng 2 năm\\\", year, \\\"có 28 ngày\\\")\\n\",\n",
-    "    \"else:\\n\",\n",
-    "    \"    print (\\\"Tháng không hợp lệ\\\")\"\n",
-    "   ]\n",
-    "  },\n",
-    "  {\n",
-    "   \"cell_type\": \"code\",\n",
-    "   \"execution_count\": 6,\n",
-    "   \"id\": \"301dd84e\",\n",
-    "   \"metadata\": {},\n",
-    "   \"outputs\": [\n",
-    "    {\n",
-    "     \"name\": \"stdout\",\n",
-    "     \"output_type\": \"stream\",\n",
-    "     \"text\": [\n",
-    "      \"Tháng 12 có 31 ngày\\n\"\n",
-    "     ]\n",
-    "    }\n",
-    "   ],\n",
-    "   \"source\": [\n",
-    "    \"def is_leap_year(year):\\n\",\n",
-    "    \"    return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"def days_in_month (month, year=None):\\n\",\n",
-    "    \"    if month in [1, 3, 5, 7, 8, 10, 12]:\\n\",\n",
-    "    \"        return 31\\n\",\n",
-    "    \"    elif month in [4, 6, 9, 11]:\\n\",\n",
-    "    \"        return 30\\n\",\n",
-    "    \"    elif month == 2:\\n\",\n",
-    "    \"        if year is None:\\n\",\n",
-    "    \"            raise ValueError(\\\"Year must be provided for February\\\")\\n\",\n",
-    "    \"        return 29 if is_leap_year(year) else 28\\n\",\n",
-    "    \"    else:\\n\",\n",
-    "    \"        raise ValueError(\\\"Invalid month\\\")\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"try:\\n\",\n",
-    "    \"    month = int(input(\\\"Nhập tháng (1-12): \\\"))\\n\",\n",
-    "    \"    if month == 2:\\n\",\n",
-    "    \"        year = int(input(\\\"Nhập năm: \\\"))\\n\",\n",
-    "    \"        days = days_in_month(month, year)\\n\",\n",
-    "    \"    else:\\n\",\n",
-    "    \"        days = days_in_month(month)\\n\",\n",
-    "    \"    print(f\\\"Tháng {month} có {days} ngày\\\")\\n\",\n",
-    "    \"    \\n\",\n",
-    "    \"except ValueError:\\n\",\n",
-    "    \"    print(\\\"Dữ liệu nhập không hợp lệ\\\")\"\n",
-    "   ]\n",
-    "  }\n",
-    " ],\n",
-    " \"metadata\": {\n",
-    "  \"kernelspec\": {\n",
-    "   \"display_name\": \"Python 3\",\n",
-    "   \"language\": \"python\",\n",
-    "   \"name\": \"python3\"\n",
-    "  },\n",
-    "  \"language_info\": {\n",
-    "   \"codemirror_mode\": {\n",
-    "    \"name\": \"ipython\",\n",
-    "    \"version\": 3\n",
-    "   },\n",
-    "   \"file_extension\": \".py\",\n",
-    "   \"mimetype\": \"text/x-python\",\n",
-    "   \"name\": \"python\",\n",
-    "   \"nbconvert_exporter\": \"python\",\n",
-    "   \"pygments_lexer\": \"ipython3\",\n",
-    "   \"version\": \"3.13.5\"\n",
-    "  }\n",
-    " },\n",
-    " \"nbformat\": 4,\n",
-    " \"nbformat_minor\": 5\n",
-    "}"
-   ]
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python 3",
-   "language": "python",
-   "name": "python3"
-  },
-  "language_info": {
-   "name": "python",
-   "version": "3.13.7"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+# 4_ngay_trong_thang.py
+def is_leap(year):
+    return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)
+
+try:
+    thang = int(input("Nhập số tháng (1-12): "))
+    if thang < 1 or thang > 12:
+        print("Tháng không hợp lệ")
+    elif thang == 2:
+        nam = int(input("Nhập năm: "))
+        print("Số ngày:", 29 if is_leap(nam) else 28)
+    elif thang in (1,3,5,7,8,10,12):
+        print("Số ngày: 31")
+    else:
+        print("Số ngày: 30")
+except Exception as e:
+    print("Lỗi nhập:", e)

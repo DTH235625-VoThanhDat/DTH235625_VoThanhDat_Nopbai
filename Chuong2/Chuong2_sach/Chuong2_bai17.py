@@ -1,99 +1,12 @@
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "0223406d",
-   "metadata": {
-    "vscode": {
-     "languageId": "plaintext"
-    }
-   },
-   "outputs": [],
-   "source": [
-    "{\n",
-    " \"cells\": [\n",
-    "  {\n",
-    "   \"cell_type\": \"code\",\n",
-    "   \"execution_count\": null,\n",
-    "   \"id\": \"0ac963bf\",\n",
-    "   \"metadata\": {},\n",
-    "   \"outputs\": [],\n",
-    "   \"source\": [\n",
-    "    \"n = int(input(\\\"Nhập số tự nhiên n: \\\"))\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"#a\\n\",\n",
-    "    \"tong_a = 0\\n\",\n",
-    "    \"for i in range(1, 2*n + 1):\\n\",\n",
-    "    \"    tong_a += i\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"#b\\n\",\n",
-    "    \"tong_b = 0\\n\",\n",
-    "    \"for i in range (1, n):\\n\",\n",
-    "    \"    if i % 2 != 0:\\n\",\n",
-    "    \"        tong_b += i\\n\",\n",
-    "    \"        \\n\",\n",
-    "    \"#c\\n\",\n",
-    "    \"tong_c = 0\\n\",\n",
-    "    \"for i in range (1, n):\\n\",\n",
-    "    \"    if i % 2 == 0:\\n\",\n",
-    "    \"        tong_c += i\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"print(\\\"Tổng a:\\\", tong_a)\\n\",\n",
-    "    \"print(\\\"Tổng b:\\\", tong_b)\\n\",\n",
-    "    \"print(\\\"Tổng c:\\\", tong_c)\\n\"\n",
-    "   ]\n",
-    "  },\n",
-    "  {\n",
-    "   \"cell_type\": \"code\",\n",
-    "   \"execution_count\": null,\n",
-    "   \"id\": \"d4d93c0b\",\n",
-    "   \"metadata\": {},\n",
-    "   \"outputs\": [],\n",
-    "   \"source\": [\n",
-    "    \"def tinh_toan(n):\\n\",\n",
-    "    \"    # a) Tổng 1+2+...+2n\\n\",\n",
-    "    \"    S1 = n * (2*n + 1)   # vì (2n)(2n+1)/2 = n(2n+1)\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"    # b) Tổng số lẻ < n\\n\",\n",
-    "    \"    k = (n - 1) // 2     # số lượng số lẻ < n\\n\",\n",
-    "    \"    S2 = k * k           # tổng k số lẻ đầu tiên\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"    # c) Tổng số chẵn < n\\n\",\n",
-    "    \"    if n % 2 == 0:\\n\",\n",
-    "    \"        k = n//2 - 1     # số lượng số chẵn < n\\n\",\n",
-    "    \"    else:\\n\",\n",
-    "    \"        k = n//2\\n\",\n",
-    "    \"    S3 = k * (k + 1)     # tổng k số chẵn đầu tiên\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"    return S1, S2, S3\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"n = int(input(\\\"Nhập n: \\\"))\\n\",\n",
-    "    \"S1, S2, S3 = tinh_toan(n)\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"print(f\\\"a) Tổng 1+2+...+2n = {S1}\\\")\\n\",\n",
-    "    \"print(f\\\"b) Tổng số lẻ < {n} = {S2}\\\")\\n\",\n",
-    "    \"print(f\\\"c) Tổng số chẵn < {n} = {S3}\\\")\\n\"\n",
-    "   ]\n",
-    "  }\n",
-    " ],\n",
-    " \"metadata\": {\n",
-    "  \"language_info\": {\n",
-    "   \"name\": \"python\"\n",
-    "  }\n",
-    " },\n",
-    " \"nbformat\": 4,\n",
-    " \"nbformat_minor\": 5\n",
-    "}"
-   ]
-  }
- ],
- "metadata": {
-  "language_info": {
-   "name": "python"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+# Câu 17a: Tính 1 + 2 + ... + 2n
+n = int(input("Nhập n: "))
+tong_2n = sum(range(1, 2*n + 1))
+print("Tổng 1 + ... + 2n =", tong_2n)
+
+# Câu 17b: Tổng số lẻ < n
+tong_le = sum(i for i in range(n) if i % 2 == 1)
+print("Tổng số tự nhiên < n và là số lẻ:", tong_le)
+
+# Câu 17c: Tổng số chẵn < n
+tong_chan = sum(i for i in range(n) if i % 2 == 0)
+print("Tổng số tự nhiên < n và là số chẵn:", tong_chan)

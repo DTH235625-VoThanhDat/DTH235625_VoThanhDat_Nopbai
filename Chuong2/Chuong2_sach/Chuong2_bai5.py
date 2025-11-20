@@ -1,138 +1,30 @@
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "4f4609fc",
-   "metadata": {
-    "vscode": {
-     "languageId": "plaintext"
-    }
-   },
-   "outputs": [],
-   "source": [
-    "{\n",
-    " \"cells\": [\n",
-    "  {\n",
-    "   \"cell_type\": \"code\",\n",
-    "   \"execution_count\": 4,\n",
-    "   \"id\": \"23666740\",\n",
-    "   \"metadata\": {},\n",
-    "   \"outputs\": [\n",
-    "    {\n",
-    "     \"name\": \"stdout\",\n",
-    "     \"output_type\": \"stream\",\n",
-    "     \"text\": [\n",
-    "      \"mười ba\\n\"\n",
-    "     ]\n",
-    "    }\n",
-    "   ],\n",
-    "   \"source\": [\n",
-    "    \"'''Nhập một số n có tối đa 2 chữ số. Hãy cho biết cách đọc ra dạng \\n\",\n",
-    "    \"chữ.  Ví dụ: n=35 => Ba mươi lăm, n=5 => năm). '''\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"n = int (input (\\\"Nhập số n: \\\"))\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"number = [\\\"không\\\", \\\"một\\\", \\\"hai\\\", \\\"ba\\\", \\\"bốn\\\", \\\"năm\\\", \\\"sáu\\\", \\\"bảy\\\", \\\"tám\\\", \\\"chín\\\"]\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"if 0 <= n < 10:\\n\",\n",
-    "    \"    print (number[n])\\n\",\n",
-    "    \"else: \\n\",\n",
-    "    \"    chuc = n // 10\\n\",\n",
-    "    \"    donvi = n % 10\\n\",\n",
-    "    \"    if chuc == 1:\\n\",\n",
-    "    \"        if donvi == 0:\\n\",\n",
-    "    \"            print (\\\"mười\\\")\\n\",\n",
-    "    \"        elif donvi == 5:\\n\",\n",
-    "    \"            print (\\\"mười lăm\\\")\\n\",\n",
-    "    \"        else:\\n\",\n",
-    "    \"            print (\\\"mười\\\", number[donvi])\\n\",\n",
-    "    \"    else:   \\n\",\n",
-    "    \"        ketqua = number[chuc] + \\\" mươi\\\"\\n\",\n",
-    "    \"        \\n\",\n",
-    "    \"        if donvi == 1:\\n\",\n",
-    "    \"            ketqua += \\\" mốt\\\"\\n\",\n",
-    "    \"        elif donvi == 5:\\n\",\n",
-    "    \"            ketqua += \\\" lăm\\\"\\n\",\n",
-    "    \"        elif donvi != 0:\\n\",\n",
-    "    \"            ketqua += \\\" \\\" + number[donvi]\\n\",\n",
-    "    \"        print (ketqua)\\n\"\n",
-    "   ]\n",
-    "  },\n",
-    "  {\n",
-    "   \"cell_type\": \"code\",\n",
-    "   \"execution_count\": 7,\n",
-    "   \"id\": \"0b2fad15\",\n",
-    "   \"metadata\": {},\n",
-    "   \"outputs\": [\n",
-    "    {\n",
-    "     \"name\": \"stdout\",\n",
-    "     \"output_type\": \"stream\",\n",
-    "     \"text\": [\n",
-    "      \"bốn mươi mốt\\n\"\n",
-    "     ]\n",
-    "    }\n",
-    "   ],\n",
-    "   \"source\": [\n",
-    "    \"def doc_2chuso (n):\\n\",\n",
-    "    \"    chuSo = [\\\"không\\\", \\\"một\\\", \\\"hai\\\", \\\"ba\\\", \\\"bốn\\\", \\\"năm\\\", \\\"sáu\\\", \\\"bảy\\\", \\\"tám\\\", \\\"chín\\\"]\\n\",\n",
-    "    \"    \\n\",\n",
-    "    \"    if n < 10:\\n\",\n",
-    "    \"        return chuSo[n]\\n\",\n",
-    "    \"    else:\\n\",\n",
-    "    \"        chuc, donvi = divmod(n, 10)\\n\",\n",
-    "    \"        if chuc == 1:\\n\",\n",
-    "    \"            if donvi == 0:\\n\",\n",
-    "    \"                return \\\"mười\\\"\\n\",\n",
-    "    \"            elif donvi == 5:\\n\",\n",
-    "    \"                return \\\"mười lăm\\\"\\n\",\n",
-    "    \"            else:\\n\",\n",
-    "    \"                return \\\"mười \\\" + chuSo[donvi]\\n\",\n",
-    "    \"        else:\\n\",\n",
-    "    \"            ketqua = chuSo[chuc] + \\\" mươi\\\"\\n\",\n",
-    "    \"            if donvi == 1:\\n\",\n",
-    "    \"                ketqua += \\\" mốt\\\"\\n\",\n",
-    "    \"            elif donvi == 5:\\n\",\n",
-    "    \"                ketqua += \\\" lăm\\\"\\n\",\n",
-    "    \"            elif donvi != 0:\\n\",\n",
-    "    \"                ketqua += \\\" \\\" + chuSo[donvi]\\n\",\n",
-    "    \"            return ketqua\\n\",\n",
-    "    \"\\n\",\n",
-    "    \"n = int(input(\\\"Nhập số n: \\\"))\\n\",\n",
-    "    \"print(doc_2chuso(n))\"\n",
-    "   ]\n",
-    "  }\n",
-    " ],\n",
-    " \"metadata\": {\n",
-    "  \"kernelspec\": {\n",
-    "   \"display_name\": \"Python 3\",\n",
-    "   \"language\": \"python\",\n",
-    "   \"name\": \"python3\"\n",
-    "  },\n",
-    "  \"language_info\": {\n",
-    "   \"codemirror_mode\": {\n",
-    "    \"name\": \"ipython\",\n",
-    "    \"version\": 3\n",
-    "   },\n",
-    "   \"file_extension\": \".py\",\n",
-    "   \"mimetype\": \"text/x-python\",\n",
-    "   \"name\": \"python\",\n",
-    "   \"nbconvert_exporter\": \"python\",\n",
-    "   \"pygments_lexer\": \"ipython3\",\n",
-    "   \"version\": \"3.13.5\"\n",
-    "  }\n",
-    " },\n",
-    " \"nbformat\": 4,\n",
-    " \"nbformat_minor\": 5\n",
-    "}"
-   ]
-  }
- ],
- "metadata": {
-  "language_info": {
-   "name": "python"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+# 5_doc_hai_chu_so.py
+digits = ["không","một","hai","ba","bốn","năm","sáu","bảy","tám","chín"]
+
+def read_two_digits(n):
+    if n < 0 or n > 99:
+        return "Ngoài phạm vi (0..99)"
+    if n < 10:
+        return digits[n].capitalize()
+    tens = n // 10
+    ones = n % 10
+    if tens == 1:
+        tens_part = "Mười"
+    else:
+        tens_part = digits[tens].capitalize() + " mươi"
+    if ones == 0:
+        return tens_part
+    # xử lý các cách đọc thông dụng cho 1 và 5 ở hàng đơn vị
+    if ones == 1:
+        ones_part = "mốt" if tens >= 2 else "một"
+    elif ones == 5:
+        ones_part = "lăm" if tens >= 1 else "năm"
+    else:
+        ones_part = digits[ones]
+    return f"{tens_part} {ones_part}"
+
+try:
+    n = int(input("Nhập số n (0..99): "))
+    print(read_two_digits(n))
+except Exception as e:
+    print("Lỗi nhập:", e)
